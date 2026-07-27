@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Letter</title>
+
+<style>
+body {
+    background: #ffd6e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial;
+}
+
+.letter {
+    width: 500px;
+    height: 350px;
+    background: #fff;
+    border: 5px solid #ff6699;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    padding-top: 50px;
+    box-shadow: 0 0 20px #ff99bb;
+}
+
+.letter:hover {
+    transform: scale(1.05);
+}
+
+.mail {
+    font-size: 100px;
+}
+
+.message {
+    display: none;
+    font-size: 40px;
+    color: #ff3366;
+    margin-top: 40px;
+    animation: pop 0.6s;
+    font-weight: bold;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="letter" onclick="openLetter()">
+
+    <div class="mail">✉</div>
+    <h2>Click the Letter</h2>
+
+    <div class="message" id="msg">
+        Ang pogi mo Heart Ruero
+    </div>
+
+</div>
+
+
+<script>
+function openLetter(){
+    document.getElementById("msg").style.display = "block";
+}
+</script>
+
+</body>
+</html>
